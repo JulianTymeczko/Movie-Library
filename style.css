@@ -1,0 +1,21 @@
+:root{
+    --body-gutter: 15%;
+    --body-margin-bottom: 150px;
+    
+}
+
+.custom-navbar{
+    margin: 0px var(--body-gutter) var(--body-margin-bottom) var(--body-gutter);
+    
+}
+.custom-header{
+   margin: 0px var(--body-gutter) var(--body-margin-bottom) var(--body-gutter);
+   max-height: 600px;
+   
+
+}
+.custom-header *{
+    max-height: 800px;
+}
+
+  
