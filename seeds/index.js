@@ -1,5 +1,5 @@
 const seedMovies = require('./movie-seeds'); // Update to your movie seed file
-const seedActors = require('./actor-seeds'); // Update to your actor seed file
+const seedActors = require('./actor-seeds.js'); // Update to your actor seed file
 const seedCharacters = require('./character-seeds'); // Update to your character seed file
 const seedCategories = require('./category-seeds');
 
