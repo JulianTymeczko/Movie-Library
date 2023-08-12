@@ -1,33 +1,81 @@
-// Import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize');
-// Import our database connection from config.js
-const sequelize = require('../config/connection');
+const router = require('express').Router();
+const { Actor, Character } = require('../../models'); // Update the model import to use Actor and Character models
 
-// Initialize Actor model (table) by extending off Sequelize's Model class
-class Actor extends Model {}
+// The `/api/actors` endpoint
 
-// Set up fields and rules for Actor model
-Actor.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    actor_name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
-    // Add more fields as needed, such as date_of_birth, nationality, etc.
-  },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'actor',
+router.get('/', async (req, res) => {
+  try {
+    // Find all actors with their associated Characters
+    const actorData = await Actor.findAll({
+      include: [
+        { model: Character }
+      ],
+    });
+    res.status(200).json(actorData);
+  } catch (err) {
+    res.status(500).json(err);
   }
-);
+});
 
-module.exports = Actor;
+router.get('/:id', async (req, res) => {
+  try {
+    // Find a single actor by its `id` value and its associated Characters
+    const actorData = await Actor.findByPk(req.params.id, {
+      include: [
+        { model: Character }
+      ],
+    });
+
+    if (!actorData) {
+      res.status(404).json({ message: 'No actor found with that id!' });
+      return;
+    }
+
+    res.status(200).json(actorData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post('/', async (req, res) => {
+  try {
+    const actorData = await Actor.create(req.body);
+    res.status(200).json(actorData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.put('/:id', async (req, res) => {
+  try {
+    const actorData = await Actor.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!actorData[0]) {
+      res.status(404).json({ message: 'No actor found with that id!' });
+      return;
+    }
+    res.status(200).json(actorData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const actorData = await Actor.destroy({
+      where: { id: req.params.id },
+    });
+    if (!actorData) {
+      res.status(404).json({ message: 'No actor with this id!' });
+      return;
+    }
+    res.status(200).json('Actor has been deleted..!!');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+module.exports = router;
