@@ -1,8 +1,11 @@
+const { Movie } = require('../models');
+
 const router = require('express').Router();
 
 router.get('/', async (req, res) => {
- 
-  res.render('index');
+const movies = await Movie.findAll();
+const data = movies.map(movie => movie.get({plain: true}))
+  res.render('index', {data, actors});
 });
 router.get('/signup', async (req, res) => {
  
@@ -12,10 +15,7 @@ router.get('/login', async (req, res) => {
  
   res.render('login');
 });
-router.get('/favourites', async (req, res) => {
- 
-  res.render('favourites');
-});
+
 router.get('/contact', async (req, res) => {
  
   res.render('contact');
