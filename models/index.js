@@ -4,13 +4,13 @@ const Actor = require('./Actor');
 const Character = require('./Character');
 const Category = require('./Category'); // Add this line to import the Category model
 
-// Movies belongToMany Actors (through Character)
+// Movies hasOne Actor (through Character)
 Movie.hasOne(Actor, {
   through: Character,
   foreignKey: 'movie_id'
 });
 
-// Actors belongToMany Movies (through Character)
+// Actors  Movies (through Character)
 Actor.hasOne(Movie, {
   through: Character,
   foreignKey: 'actor_id'
