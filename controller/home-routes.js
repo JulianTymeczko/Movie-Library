@@ -5,7 +5,7 @@ const router = require('express').Router();
 router.get('/', async (req, res) => {
 const movies = await Movie.findAll();
 const data = movies.map(movie => movie.get({plain: true}))
-  res.render('index', {data, actors});
+  res.render('index', {data});
 });
 router.get('/signup', async (req, res) => {
  
