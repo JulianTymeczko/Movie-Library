@@ -1,7 +1,7 @@
 :root{
     --body-gutter: 20%;
     --body-margin-bottom: 150px;
-    
+    --animation-delay: 2s;
 }
 
 .custom-navbar{
@@ -17,9 +17,21 @@
 .custom-header *{
     max-height: 700px;
 }
-
-main{
+nav{
+    animation-name: timedDisplay;
+   animation-duration: 2s;
    
+}
+header{
+    animation-name: timedDisplay;
+   animation-duration: 2s;
+   animation-delay: var(--animation-delay);
+   
+}
+main{
+   animation-name: timedDisplay;
+   animation-duration: 2s;
+   animation-delay: calc(var(--animation-delay) + var(--animation-delay));
    margin: 300px var(--body-gutter) var(--body-margin-bottom) var(--body-gutter);
 }
 main > div{
@@ -38,4 +50,20 @@ main > div{
 ::-webkit-scrollbar-thumb {
     background-color: #ff6600;
     border-radius: 10px;
+}
+
+
+@keyframes timedDisplay {
+    from{
+        opacity: 0;
+    }
+
+
+    50%{
+        opacity: .5;
+    }
+
+    to{
+        opacity: 1;
+    }
 }
