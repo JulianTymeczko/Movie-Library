@@ -48,6 +48,7 @@ Me and Julian took initiative and challenged ourselves by seperating tasks betwe
 
 ## Future Development of Application: 
 
+As of today, our application definitely needs MAJOR improvements especially with the backend code. We need to work on implementing the backend code with frontend code with RESTful API communication through an integration layer exposing the existing systems. This would help improve our application as a whole and once these implementations are completed the frontend code could be updated and hnelp wit the design aspects of our project. 
 
 ## Heroku Link:
 
