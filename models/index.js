@@ -25,7 +25,7 @@ Movie.belongsTo(Category, {
 // Categories have many Movies
 Category.hasMany(Movie, {
   foreignKey: 'category_id',
-  onDelete: 'CASCADE',
+  // onDelete: 'CASCADE',
 });
 
 module.exports = {

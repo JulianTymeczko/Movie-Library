@@ -8,11 +8,11 @@ router.get('/', async (req, res) => {
   try {
     // Find all movies with their associated Actors, Characters, and Categories
     const movieData = await Movie.findAll({
-      include: [
+     /* include: [
         { model: Actor },
         { model: Character },
         { model: Category },
-      ],
+      ], */
     });
     res.status(200).json(movieData);
   } catch (err) {

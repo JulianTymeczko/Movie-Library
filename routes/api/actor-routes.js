@@ -7,9 +7,9 @@ router.get('/', async (req, res) => {
   try {
     // Find all actors with their associated Characters
     const actorData = await Actor.findAll({
-      include: [
+     /* include: [
         { model: Character }
-      ],
+      ], */
     });
     res.status(200).json(actorData);
   } catch (err) {
