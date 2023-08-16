@@ -44,15 +44,20 @@ Many contributions between group members.
 
 ## What We Learned:
 
-Me and Julian took initiative and challenged ourselves by seperating tasks between us. Julian took the initiative to concentrate fully on the frontend code and I took control of the backend code. For us, this task was extremely difficult but also rewarding eventhough our application is not fully functional. We both learned how important collaboration is during a project. Better communication between team members, increased productivity and improved morale. When team members are working towards a common goal, it can build on each other's ideas, strenghts and weaknesses while feeling like a successful team. This experience will definetely help us in the future.
+Our group took initiative and challenged ourselves by seperating tasks between us. Julian took the initiative to concentrate fully on the frontend code and I, Sophie, took control of the backend code. For us, this task was extremely difficult but also rewarding eventhough our application is not fully functional. We both learned how important collaboration is during a project. Better communication between team members, increased productivity and improved morale. When team members are working towards a common goal, it can build on each other's ideas, strenghts and weaknesses while feeling like a successful team. This experience will definetely help us in the future.
 
 ## Future Development of Application: 
 
-As of today, our application definitely needs MAJOR improvements especially with the backend code. We need to work on implementing the backend code with frontend code with RESTful API communication through an integration layer exposing the existing systems. This would help improve our application as a whole and once these implementations are completed the frontend code could be updated and help wit the design aspects of our project. 
+As of today, our application definitely needs MAJOR improvements especially with the backend and frontend code. Not only were we missing one group member but we are still learning how to properly connect frontend code with backend code. As the backend developer for this project, I, Sophie, need to work on making sure our database code is done correctly but also need to work on implementing the backend code with frontend code with RESTful API communication through an integration layer exposing the existing system. This connection between frontend and backend code would also make it possible to deploy to Heroku, which at this moment we are unable to achieve. Once these implementations are completed, the frontend code could be updated and help with the design aspects of our project. The connection to Insomnia is being made, which is great but we need to finish debugging the backend code and make sure a database can be properly created in MYSQL. (Please refer to screenshots below.)
+
+## Screenshots: 
+
+
+
 
 ## Heroku Link:
 
-[Movie-Library]()
+Not able to make a Heroku connection due to the fact that our backend code and frontend code is not completed.
 
 ## Github Repository Link:
 
