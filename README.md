@@ -42,7 +42,7 @@ Many contributions between group members.
 
 > **(SQL for Data Analysis: Advanced Techniques for Transforming Data into Insights, Cathy Tanimura; 1st edition (Oct. 19th 2021) 357 pages.)** 
 
-## What we learned:
+## What We Learned:
 
 Me and Julian took initiative and challenged ourselves by seperating tasks between us. Julian took the initiative to concentrate fully on the frontend code and I took control of the backend code. For us, this task was extremely difficult but also rewarding eventhough our application is not fully functional. We both learned how important collaboration is during a project. Better communication between team members, increased productivity and improved morale. When team members are working towards a common goal, it can build on each other's ideas, strenghts and weaknesses while feeling like a successful team. This experience will definetely help us in the future.
 
