@@ -52,8 +52,11 @@ As of today, our application definitely needs MAJOR improvements especially with
 
 ## Screenshots: 
 
+![public/images/SQL.png](public/images/SQL.png)
 
+![public/images/Insomnia.png](public/images/Insomnia.png)
 
+![public/images/Insomnia2.png](public/images/Insomnia2.png)
 
 
 ## Heroku Link:
