@@ -50,6 +50,7 @@ Our group took initiative and challenged ourselves by seperating tasks between u
 
 As of today, our application definitely needs MAJOR improvements especially with the backend and frontend code. Not only were we missing one group member but we are still learning how to properly connect frontend code with backend code. As the backend developer for this project, I, Sophie, need to work on making sure our database code is done correctly but also need to work on implementing the backend code with frontend code with RESTful API communication through an integration layer exposing the existing system. This connection between frontend and backend code would also make it possible to deploy to Heroku, which at this moment we are unable to achieve. Once these implementations are completed, the frontend code could be updated and help with the design aspects of our project. The connection to Insomnia is being made, which is great but we need to finish debugging the backend code which could take another week.(Please refer to screenshots below.)
 
+
 ## Screenshots: 
 
 ![public/images/SQL.png](public/images/SQL.png)
@@ -59,9 +60,15 @@ As of today, our application definitely needs MAJOR improvements especially with
 ![public/images/Insomnia2.png](public/images/Insomnia2.png)
 
 
+## Trello:
+
+![public/images/Trello.png](public/images/Trello.png)
+
+
 ## Heroku Link:
 
 Not able to make a Heroku connection due to the fact that our backend code and frontend code is not completed.
+
 
 ## Github Repository Link:
 
