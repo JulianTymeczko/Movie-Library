@@ -37,7 +37,7 @@ Many contributions between group members.
 
 **"Always leave the code a little cleaner than when you found it."**  This action was applied to HTML, CSS and JAVASCRIPT. To create a real-world application from scratch, we have used Lawrence Wilson's Audiobook, Cathy Tanimura's book on SQL., references for our style.css on Google, W3Schools, CSSPortal, Snyk and all ZOOM recordings (of previous classes). Looks much cleaner, organised and easier to find what you are looking for. Comments were added in JAVASCRIPT to show what was done and for what purpose. To complete the backend code, our group received the help of my tutor, Erik Hoversten. He helped cleaned up the code and fix multiple errors I have encountered while building this database. 
 
-> **(CARL-VIRT-FSF-PT-04-2023, Project 1 / README.md 2023)**
+> **(CARL-VIRT-FSF-PT-04-2023, Project 2 / README.md 2023)**
 > **(JavaScript Full Stack Developers, Lawrence Wilson; Audiobook (2023) 6hrs and 29mins. )**
 
 > **(SQL for Data Analysis: Advanced Techniques for Transforming Data into Insights, Cathy Tanimura; 1st edition (Oct. 19th 2021) 357 pages.)** 
