@@ -46,7 +46,7 @@ To work on the backend code, our group received the help of my tutor, Erik Hover
 
 ## What We Learned:
 
-Our group took initiative and challenged ourselves by seperating tasks between us. Julian took the initiative to concentrate fully on the frontend code and I, Sophie, took control of the backend code. For us, this task was extremely difficult but also rewarding eventhough our application is not fully functional. We both learned how important collaboration is during a project. Better communication between team members, increased productivity and improved morale. When team members are working towards a common goal, it can build on each other's ideas, strenghts and weaknesses while feeling like a successful team. This experience will definetely help us in the future.
+Our group took initiative and challenged ourselves by separating tasks between us. Julian took the initiative to concentrate fully on the frontend code and I, Sophie, took control of the backend code. For us, this task was extremely difficult but also rewarding eventhough our application is not fully functional. We both learned how important collaboration is during a project. Better communication between team members, increased productivity and improved morale. When team members are working towards a common goal, it can build on each other's ideas, strengths and weaknesses while feeling like a successful team. This experience will definitely help us in the future.
 
 ## Future Development of Application: 
 
