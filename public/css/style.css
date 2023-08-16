@@ -1,5 +1,5 @@
 :root{
-    --body-gutter: 15%;
+    --body-gutter: 20%;
     --body-margin-bottom: 150px;
     
 }
@@ -15,7 +15,13 @@
 
 }
 .custom-header *{
-    max-height: 800px;
+    max-height: 700px;
 }
 
-  
+main{
+   
+   margin: 300px var(--body-gutter) var(--body-margin-bottom) var(--body-gutter);
+}
+main > div{
+    display: inline-block;
+}  
