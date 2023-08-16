@@ -56,4 +56,4 @@ As of today, our application definitely needs MAJOR improvements especially with
 
 ## Github Repository Link:
 
-https://github.com/SMarquis85/C12-SQLEmployeeTracker
+[GIT REPOSITORY](https://github.com/JulianTymeczko/Movie-Library)
