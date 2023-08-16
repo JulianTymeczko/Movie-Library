@@ -35,16 +35,24 @@ Many contributions between group members.
 
 ## Final Work Review
 
-**"Always leave the code a little cleaner than when you found it."**  This action was applied to HTML, CSS and JAVASCRIPT. To create a real-world application from scratch, we have used Jon Ducket's JAVASCRIPT & JQuery book, references for our style.css on Google, W3Schools, CSSPortal, Snyk and all ZOOM recordings (of previous classes). Looks much cleaner, organised and easier to find what you are looking for. Comments were added in JAVASCRIPT to show what was done and for what purpose.
+**"Always leave the code a little cleaner than when you found it."**  This action was applied to HTML, CSS and JAVASCRIPT. To create a real-world application from scratch, we have used Lawrence Wilson's Audiobook, Cathy Tanimura's book on SQL., references for our style.css on Google, W3Schools, CSSPortal, Snyk and all ZOOM recordings (of previous classes). Looks much cleaner, organised and easier to find what you are looking for. Comments were added in JAVASCRIPT to show what was done and for what purpose. To complete the backend code, our group received the help of my tutor, Erik Hoversten. He helped cleaned up the code and fix multiple errors I have encountered while building this database. 
 
 > **(CARL-VIRT-FSF-PT-04-2023, Project 1 / README.md 2023)**
-> **(JAVASCRIPT & JQUERRY, Jon Duckett, Wiley; First edition (June 30 2014) pages 14-292. )**
+> **(JavaScript Full Stack Developers, Lawrence Wilson; Audiobook (2023) 6hrs and 29mins. )**
+
+> **(SQL for Data Analysis: Advanced Techniques for Transforming Data into Insights, Cathy Tanimura; 1st edition (Oct. 19th 2021) 357 pages.)** 
 
 ## What we learned:
 
-Our group was unfortunetly down one member. Me and Julian took initiative and challenged ourselves by seperating tasks between us. Julian took the initiative to concentrate fully on the frontend code and I took control of the backend code. For us, this task was extremely difficult but also rewarding eventhough our application is not fully functional. We both learned how important collaboration is during a project. Better communication, increased productivity and improved morale. When team members are working towards a common goal, it can build on each other's ideas, strenghts and wweaknesses while feeling like a successful team. This experience will definetely help us in the future.
+Me and Julian took initiative and challenged ourselves by seperating tasks between us. Julian took the initiative to concentrate fully on the frontend code and I took control of the backend code. For us, this task was extremely difficult but also rewarding eventhough our application is not fully functional. We both learned how important collaboration is during a project. Better communication between team members, increased productivity and improved morale. When team members are working towards a common goal, it can build on each other's ideas, strenghts and weaknesses while feeling like a successful team. This experience will definetely help us in the future.
 
 ## Future Development of Application: 
 
 
-The assignment can be viewed here: [Movie-Library]()
+## Heroku Link:
+
+[Movie-Library]()
+
+## Github Repository Link:
+
+https://github.com/SMarquis85/C12-SQLEmployeeTracker
