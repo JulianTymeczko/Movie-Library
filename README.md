@@ -73,7 +73,7 @@ As of today, our application definitely needs MAJOR improvements especially with
 
 ## Heroku Link:
 
-Not able to make a Heroku connection due to the fact that our backend code and frontend code is not completed.
+https://vast-anchorage-59166-c63089e5b310.herokuapp.com/
 
 
 ## Github Repository Link:
