@@ -63,7 +63,7 @@ As of today, our application definitely needs MAJOR improvements especially with
 
 ![public/images/HEROKU.png](public/images/HEROKU.png)
 
-![public/images/HEROKU2.png](public/images/HEROKU.png)
+![public/images/HEROKU2.png](public/images/HEROKU2.png)
 
 
 ## Trello:
