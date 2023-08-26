@@ -21,16 +21,17 @@ router.get('/', async (req, res) => {
 });
 
 // Get one movie
-router.get('/:id', async (req, res) => {
+router.get('/:title', async (req, res) => {
+  console.log("Incoming Data: ", req.params);
   try {
     // Find a single movie by its `id` value and its associated Actors, Characters, and Categories
-    const movieData = await Movie.findByPk(req.params.id, {
+    const movieData = await Movie.findOne( { where: { title: req.params.title } }, /* {
       include: [
         { model: Actor },
         { model: Character },
         { model: Category },
       ],
-    });
+    } */);
 
     if (!movieData) {
       res.status(404).json({ message: 'No movie found with that id!' });
