@@ -21,3 +21,4 @@ const characterData = [
 const seedCharacters = () => Character.bulkCreate(characterData);
 
 module.exports = seedCharacters;
+

@@ -21,3 +21,4 @@ const actorData = [
 const seedActors = () => Actor.bulkCreate(actorData);
 
 module.exports = seedActors;
+
