@@ -18,8 +18,22 @@ Character.init(
     character_name: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
     // Add more fields as needed, such as description, role, etc.
+    movie_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'movie',
+        ref: 'id'
+      }
+    },
+    actor_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'actor',
+        ref: 'id'
+      }
+    },
   },
   {
     sequelize,

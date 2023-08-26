@@ -37,5 +37,14 @@ router.get('/aboutus', async (req, res) => {
   res.render('aboutus');
 });
 
+router.get('/api/movies/:name', (req, res) => {
+  // here we make our request for data to the DATABASE
+  let data = // call to database
+  // filter any logic
+
+  // return the VIEW & the DATA
+  res.render('viewName', { data })
+})
+
 
 module.exports = router;

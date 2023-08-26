@@ -4,28 +4,28 @@ const Actor = require('./Actor');
 const Character = require('./Character');
 const Category = require('./Category'); // Add this line to import the Category model
 
-// Movies hasOne Actor (through Character)
-Movie.hasOne(Actor, {
+// Movies belongToMany Actors (through Character)
+Movie.belongsToMany(Actor, {
   through: Character,
   foreignKey: 'movie_id'
 });
 
-// Actors  Movies (through Character)
-Actor.hasOne(Movie, {
+// Actors belongToMany Movies (through Character)
+Actor.belongsToMany(Movie, {
   through: Character,
   foreignKey: 'actor_id'
 });
 
 // Movies belong to Categories
-Movie.hasOne(Category, {
+Movie.belongsTo(Category, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE',
 });
 
 // Categories have many Movies
-Category.hasOne(Movie, {
+Category.hasMany(Movie, {
   foreignKey: 'category_id',
-  onDelete: 'CASCADE',
+  // onDelete: 'CASCADE',
 });
 
 module.exports = {
@@ -33,4 +33,4 @@ module.exports = {
   Actor,
   Character,
   Category // Add Category to the exported object
-};
+}; 
