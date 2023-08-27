@@ -20,7 +20,7 @@ formEle.addEventListener('submit', (event) => {
     }).then(data => {
         console.log("Data From Database: ", data);
 
-        // herer we need to UPDate our DOM
+        // here we need to Update our DOM
         // dynamically create some HTML tags
         let movieHTML = document.createElement('p');
         movieHTML.textContent = data.title;
