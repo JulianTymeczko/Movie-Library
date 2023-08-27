@@ -5,9 +5,9 @@ const actorRoutes = require('./actor-routes'); // Add actor-routes
 const categoryRoutes = require('./category-routes');
 
 // All of these routes are prefixed with '/api'
-router.use('./movies', movieRoutes); // Update to use movieRoutes
-router.use('./actors', actorRoutes); // Add actorRoutes
+router.use('/movies', movieRoutes); // Update to use movieRoutes
+router.use('/actors', actorRoutes); // Add actorRoutes
 // router.use('/characters', characterRoutes); // Add characterRoutes
-router.use('./categories', categoryRoutes);
+router.use('/categories', categoryRoutes);
 
 module.exports = router;

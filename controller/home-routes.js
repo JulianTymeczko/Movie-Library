@@ -21,7 +21,7 @@ const data = [{
 */
 
 router.get('/', (req, res) => {
-  res.render('landing');
+  res.render('index');
 })
 
 router.get('/signup', async (req, res) => {
