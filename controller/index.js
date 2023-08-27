@@ -1,11 +1,15 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
+const apiRoutes = require('./api');
 
-const movieRoutes = require('./api/movie-routes');
-const apiRoutes = require('./api/index');
-const categoryRoutes = require('./api/category-routes');
 const homeRoutes = require('./home-routes')
 router.use('/', homeRoutes);
+
+
 router.use('/api', apiRoutes);
+
+router.use((req, res) => {
+    res.send("<h1>Wrong Route!</h1>")
+});
+
 
 module.exports = router;
