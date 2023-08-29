@@ -28,14 +28,57 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/signup', async (req, res) => {
- 
   res.render('signup');
 });
 
-router.get('/login', async (req, res) => {
- 
-  res.render('Login');
+router.post('/signup', async (req, res) => {
+  try {
+    const newUser = await User.create({
+      // Assuming you have fields like email and password in your User model
+      email: req.body.email,
+      password: req.body.password,
+      // Add other fields as needed
+    });
+
+    req.session.loggedIn = true;
+    // You can set more session properties if needed
+
+    return res.status(200).json({ message: 'Signup successful.' });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: 'An error occurred.' });
+  }
 });
+
+router.post('/login', async (req, res) => {
+  try {
+    const dbUserData = await User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
+
+    if (!dbUserData) {
+      return res.status(400).json({ message: 'Incorrect email or password.' });
+    }
+
+    const validPassword = await dbUserData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      return res.status(400).json({ message: 'Incorrect email or password.' });
+    }
+
+    req.session.loggedIn = true; // Set the loggedIn property in the session
+    // You can set more session properties if needed
+
+    return res.status(200).json({ message: 'Login successful.' });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: 'An error occurred.' });
+  }
+});
+
+module.exports = router;
 
 router.get('/contact', async (req, res) => {
  
