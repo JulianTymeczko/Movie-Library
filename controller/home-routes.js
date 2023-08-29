@@ -23,8 +23,8 @@ const data = [{
 router.get('/', async (req, res) => {
   // TODO: double check if this is correct.
   const result = await Movie.findAll();
-  const movies = result.map(x => x.get({plaine: true}));
-  res.render('index', {movies });
+  const movies = result.map(x => x.get({plain: true}));
+  res.render('index', {movies});
 })
 
 router.get('/signup', async (req, res) => {
