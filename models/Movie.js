@@ -27,6 +27,9 @@ Movie.init(
         model: 'category',
         key: 'id'
       }
+    },
+    image: {
+      type: DataTypes.STRING,
     }
   },
   {
