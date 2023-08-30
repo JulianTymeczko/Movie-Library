@@ -19,17 +19,20 @@ Movie.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    // Add more fields as needed, such as description, genre, etc.
-    category_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'category',
-        key: 'id'
-      }
-    },
+    // // Add more fields as needed, such as description, genre, etc.
+    // category_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    //   references: {
+    //     model: 'category',
+    //     key: 'id'
+    //   }
+    // },
     image: {
       type: DataTypes.STRING,
+    },
+    year_of_release: {
+      type: DataTypes.INTEGER
     }
   },
   {
@@ -38,7 +41,8 @@ Movie.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'movie',
-  }
+  },
+
 );
 
 module.exports = Movie;
