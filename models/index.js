@@ -3,7 +3,7 @@ const Movie = require('./Movie');
 const Actor = require('./Actor');
 const Character = require('./Character');
 const Category = require('./Category'); // Add this line to import the Category model
-
+const User = require('./User')
 // Movies belongToMany Actors (through Character)
 Movie.belongsToMany(Actor, {
   through: Character,
@@ -32,5 +32,6 @@ module.exports = {
   Movie,
   Actor,
   Character,
-  Category // Add Category to the exported object
+  Category, // Add Category to the exported object
+  User
 }; 

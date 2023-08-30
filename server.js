@@ -3,7 +3,9 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const routes = require('./controller');
 
-// TODO: add this stuff
+// TODO --> ADD SESSION configuration (checkout Mini-Proj in MVC section --> server.js file)
+
+// TODO: add this stuff 
 
 // const helpers = require('./utils/helpers');
  const sequelize = require('./config/connection');
@@ -11,8 +13,7 @@ const routes = require('./controller');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-
- const hbs = exphbs.create();
+const hbs = exphbs.create();
 
 
 app.engine('handlebars', hbs.engine);
