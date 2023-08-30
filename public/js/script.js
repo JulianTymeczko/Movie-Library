@@ -1,40 +1,30 @@
-//let isLoggedIn = true;
-
-
-// let source = document.getElementById("navbar-template").innerHTML;
-//let template = Handlebars.compile(source);
-
-
-//let context = { isLoggedIn: isLoggedIn };
-//let html = template(context);
-
-
-//document.querySelector(".navbar").innerHTML = html
-
-
-let signup = document.getElementById("signup-form");
-signup.addEventListener('submit', function(event) {
+async function signupFormHandler(event) {
     event.preventDefault();
-    // First we GRAB references or DATA
-    let emailInput = document.getElementById('email').value;
-    let usernameInput = document.getElementById('username').value;
-    let passwordInput = document.getElementById('password').value;
-    let confirmInput = document.getElementById('confirm').value;
 
-    console.log("Data: ", email, username, password, confirm)
-    // SECOND we SEND that info to the SERVER (API route)
+    const username = document.querySelector('#username-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
 
-    //-->  run some vaidation 
-    // check if CONFRIM == PASSWORD
+    if (username && email && password) {
+        const response = await fetch('/api/users', {
+            method: 'POST',
+            body: JSON.stringify({
+                username,
+                email,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json' }
+        });
+        if (response.ok) {
+            console.log('success');
 
 
-   fetch('/api/users', {
-    method: "POST",
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-        email: emailInput,
-        username: usernameInput,
-        password: passwordInput,
-    })
-   })
-});
+            document.location.replace('/login');
+
+        } else {
+            alert(response.statusText);
+        }
+    }
+}
+
+document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);

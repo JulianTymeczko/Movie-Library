@@ -28,26 +28,29 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/signup', async (req, res) => {
- 
+  
   res.render('signup');
 });
 
 router.get('/login', async (req, res) => {
- 
+  
   res.render('Login');
 });
 
 router.get('/contact', async (req, res) => {
- 
+  
   res.render('contact');
 });
 router.get('/aboutus', async (req, res) => {
- 
+  
   res.render('aboutus');
 });
 
-router.get('/movies', (req, res) => {
-  res.render('landing');
+router.get('/movies', async(req, res) => {
+  // we 
+  const result = await Movie.findAll();
+  const movies = result.map(x => x.get({plain: true}));
+  res.render('movies', {movies});
 })
 
 

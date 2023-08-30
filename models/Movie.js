@@ -29,7 +29,7 @@ Movie.init(
     //   }
     // },
     image: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     },
     year_of_release: {
       type: DataTypes.INTEGER

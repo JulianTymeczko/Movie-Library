@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
         res.status(500).json({ message: "User not created"});
         return
     }
-
+    console.log("New User Created!!");
     // WE need to Authorize the new USER (through the Request Session Object)
 
 
@@ -30,16 +30,66 @@ router.post('/', async (req, res) => {
 
 })
 
-router.post('/login', (req, res) => {
+// ** Login
+router.post('/login', async (req, res) => {
+    console.log("Incoming Data: ", req.body);
+    try {
+      const dbUserData = await User.findOne({
+        where: {
+          username: req.body.username,
+        },
+      });
+  
+      if (!dbUserData) {
+        res
+          .status(400)
+          .json({ message: 'Incorrect username or password. Please try again!' });
+        return;
+      }
 
+      res.redirect('/')
+      
+      /*
+      const validPassword = await dbUserData.checkPassword(req.body.password);
+      
+      if (!validPassword) {
+          res
+          .status(400)
+          .json({ message: 'Incorrect email or password. Please try again!' });
+          return;
+        }
+        
+        res.redirect('/')
 
-    // query the DB for the existing USER email and VALID password (bcrypt library)
-    User.findOne({ where: req.body.email});
-
-    // VALIDATE 
-    // IF there is a USER --> is there PASSWORD VALID (bcrypt)
-    
-})
-
-
-module.exports = router;
+        
+      req.session.save(() => {
+        req.session.loggedIn = true;
+        console.log(
+          '🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie',
+          req.session.cookie
+        );
+  
+        res
+          .status(200)
+          .json({ user: dbUserData, message: 'You are now logged in!' });
+      });
+      */
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  
+  // Logout
+  router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
+  
+  module.exports = router;
+  
