@@ -40,18 +40,26 @@ router.post('/login', async (req, res) => {
         },
       });
   
+      console.log("Found User: ", dbUserData);
+
       if (!dbUserData) {
         res
           .status(400)
           .json({ message: 'Incorrect username or password. Please try again!' });
         return;
       }
-
-      res.redirect('/')
       
       /*
-      const validPassword = await dbUserData.checkPassword(req.body.password);
+      res.redirect('/')
+
+      let isValid = bcrypt.compare(myPlaintextPassword, hash, function(err, result) {
+        // result == true
+      });
+      */
       
+      
+      const validPassword = await dbUserData.checkPassword(req.body.password);
+      console.log("Password Valid? ", validPassword)
       if (!validPassword) {
           res
           .status(400)
@@ -61,7 +69,7 @@ router.post('/login', async (req, res) => {
         
         res.redirect('/')
 
-        
+      /*
       req.session.save(() => {
         req.session.loggedIn = true;
         console.log(
